@@ -270,3 +270,41 @@ for i in range(10):
 
 plt.tight_layout()
 plt.show()
+"""Output:
+Training Images: 60000
+Testing Images: 10000
+Image Shape: torch.Size([1, 28, 28])
+Label: 5
+Minimum Pixel Value: tensor(0.)
+Maximum Pixel Value: tensor(1.)
+Images Shape: torch.Size([64, 1, 28, 28])
+Labels Shape: torch.Size([64])
+CNN(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (fc1): Linear(in_features=3136, out_features=128, bias=True)
+  (fc2): Linear(in_features=128, out_features=10, bias=True)
+)
+torch.Size([64, 10])
+CrossEntropyLoss()
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    decoupled_weight_decay: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0
+)
+Epoch [1/5], Loss: 0.1723
+Epoch [2/5], Loss: 0.0492
+Epoch [3/5], Loss: 0.0343
+Epoch [4/5], Loss: 0.0242
+Epoch [5/5], Loss: 0.0191
+Test Accuracy: 98.89%"""
